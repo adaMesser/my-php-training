@@ -20,7 +20,6 @@
             'trigger' => isset($_POST['trigger']) ? $_POST['trigger'] : 0,
         );
         ?>
-       <!-- <?php $results = get_dice_results($options['dice_type'], $options['count']); ?>-->
          <?php $results = filter_wrapper($options['dice_type'], $options['count'], $options['trigger']); ?>
 
 
