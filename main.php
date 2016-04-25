@@ -13,8 +13,8 @@
 
 
       <div class="form-group">
-        <label for="command_line">Введите команду: </label>
-        <input id="command_line" type="text" name="command_line" value="1" min="1" max="6" class="form-control">
+        <label for="command">Введите команду: </label>
+        <input id="command" type="text" name="command" value="1" min="1" max="6" class="form-control">
 
       </div>
 
