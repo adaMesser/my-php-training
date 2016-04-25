@@ -21,3 +21,8 @@ function get_dice_results($dice_type, $count) {
      return $results;
    }
  }
+
+function parser($command){
+  
+  return filter_wrapper($dice_type, $count, $trigger);
+}
