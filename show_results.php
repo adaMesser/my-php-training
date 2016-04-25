@@ -9,15 +9,19 @@
 <body>
 <div class="center">
   <div class="content">
-    <?php $results = filter_wrapper($options['dice_type'], $options['count'], $options['trigger']); ?>
+    <!--Парсер обрабатывает введенную команду-->
+    <!-- переменная $results принимает знач. результ. массива-->
+    <?php $results = parser($options['command']); ?>
 
+<!--  Цикл вывода результатов  -->
     <?php foreach ($results as $result): ?>
-      <!--Меняем значене класа в зависимоти от возвращаемого значения-->
+<!--  Выводятся только элементы, которые больше равно мин. знач.-->
       <?php if ($result >= $options['min_value']): ?>
         <div class="dice-<?php echo $result; ?> dices"></div><br/>
       <?php endif; ?>
     <?php endforeach; ?>
 
+<!--    Кнопка назад-->
     <form action="index.php" method="get" role="form">
       <div class="btn_center">
         <input type="submit" value="На главную" class="btn btn-danger">
