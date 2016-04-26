@@ -18,7 +18,7 @@
         <div class="dice-<?php echo $result; ?> dices"></div><br/>
     <?php endforeach; ?>
 
-<!--    Кнопка назад-->
+<!-- Кнопка назад-->
     <form action="index.php" method="get" role="form">
       <div class="btn_center">
         <input type="submit" value="На главную" class="btn btn-danger">
