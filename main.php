@@ -13,12 +13,9 @@
 
 
       <div class="form-group">
-        <label for="command">Введите команду: </label>
+        <label for="command">Введите команду </label>
         <input id="command" type="text" name="command" value="1" min="1" max="6" class="form-control">
-
       </div>
-
-
 
       <div class="btn_center">
         <input type="submit" value="Играть" class="btn btn-danger">

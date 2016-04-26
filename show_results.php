@@ -15,10 +15,7 @@
 
 <!--  Цикл вывода результатов  -->
     <?php foreach ($results as $result): ?>
-<!--  Выводятся только элементы, которые больше равно мин. знач.-->
-      <?php if ($result >= $options['min_value']): ?>
         <div class="dice-<?php echo $result; ?> dices"></div><br/>
-      <?php endif; ?>
     <?php endforeach; ?>
 
 <!--    Кнопка назад-->
