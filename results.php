@@ -12,6 +12,7 @@ function get_dice_results($dice_type, $count)
 
 function filter_wrapper($dice_type, $count, $trigger, $comparison_sign, $value)
 {
+    $results = [];
     //получаем значение массива count случайных чисел
     $result_tmp = get_dice_results($dice_type, $count);
 
@@ -60,15 +61,12 @@ function filter_wrapper($dice_type, $count, $trigger, $comparison_sign, $value)
     //если указан порядок сортировки asc (по возрастанию)
     if ($trigger == 'asc') {
         sort($results);
-        return $results;
     }  //если указан обратный порядок сортировки
     elseif ($trigger == 'desc') {
         rsort($results);
-        return $results;
-    } //если порядок сортировки не указан 
-    else {
-        return $results;
     }
+    return $results;
+
 }
 
 function parser($command)
@@ -85,7 +83,9 @@ function parser($command)
         //значит количество бросков count равно второму элементу массива
         $count = $arr[1];
     } else {
-        echo 'error throw'; //иначе команда введена неправильно
+        header('Location: index.php');
+        exit('error '); //иначе команда введена неправильно
+
     }
 
     //проверка на наличие обязательного элемента d
@@ -94,12 +94,14 @@ function parser($command)
         //тогда количество граней куба равно значению, записаному после d
         $dice_type = substr($arr[2], 1);
     } else {
-        echo 'error ';//иначе команда введена неправильно
+        header('Location: index.php');
+        exit('error ');//иначе команда введена неправильно
+
     }
 
     //проверка на наличие фильтра
     //если четвертый элемент команды равен filter
-    if(isset($arr[3])) {
+    if (isset($arr[3])) {
         if ($arr[3] == 'filter') {
             //значит знак сравнения равен пятому элементу команды
             $comparison_sign = $arr[4];
