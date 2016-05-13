@@ -17,7 +17,7 @@
         if(empty($goods)) {
             $goods = array(
                 'name' => 'Name',
-                'id_warehouse' => '',
+                'id_warehouse' => 1,
                 'price' => 0,
                 'number' => 1,
             );
@@ -58,9 +58,17 @@
                         <label for="warehouse">Warehouse</label>
                     </td>
                     <td>
-                        <select id="warehouse" name="id_warehouse">
+
+                        <select id="warehouse" name="id_warehouse" >
                             <?php foreach ($warehouses as $warehouses) : ?>
                                 <option
+                                    <?php
+                                    if($warehouses['id']==$goods['id_warehouse']){
+                                        ?>
+                                        selected
+                                        <?php
+                                    }
+                                    ?>
                                     value="<?php print htmlspecialchars($warehouses['id']); ?>"><?php print htmlspecialchars($warehouses['name']); ?></option>
                             <?php endforeach; ?>
                         </select>

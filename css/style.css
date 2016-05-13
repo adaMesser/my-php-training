@@ -47,14 +47,11 @@ input, select {
     background: #FFFAF0 !important;
     outline: none;
     height: 30px;
-    width: 80px;
+    width: 120px;
     font-size: 16px;
     font-family: Tahoma;
 }
 
-#name {
-    width: 120px;
-}
 
 .center_button {
     text-align: center;
