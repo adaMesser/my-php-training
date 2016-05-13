@@ -10,11 +10,11 @@
 <div class="center">
     <div class="content">
         <header>
-            <a href="index.php">Simple CRUD application   </a>
+            <a href="index.php">Simple CRUD application </a>
         </header>
 
         <?php
-        if(empty($goods)) {
+        if (empty($goods)) {
             $goods = array(
                 'name' => 'Name',
                 'id_warehouse' => 1,
@@ -59,11 +59,11 @@
                     </td>
                     <td>
 
-                        <select id="warehouse" name="id_warehouse" >
+                        <select id="warehouse" name="id_warehouse">
                             <?php foreach ($warehouses as $warehouses) : ?>
                                 <option
                                     <?php
-                                    if($warehouses['id']==$goods['id_warehouse']){
+                                    if ($warehouses['id'] == $goods['id_warehouse']) {
                                         ?>
                                         selected
                                         <?php
