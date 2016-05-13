@@ -1,0 +1,112 @@
+body {
+    background-image: url(../img/bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+    font-family: Georgia;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+
+}
+
+.content {
+    background-color: rgba(255, 255, 255, .6);
+    padding-bottom: 10px;
+    border-radius: 15px;
+    margin-top: 20px;
+    width: 530px;
+}
+
+.item {
+    clear: both;
+    text-align: right;
+    line-height: 25px;
+}
+
+label {
+    width: 100%;
+    text-align: center;
+}
+
+.main {
+    float: left;
+}
+
+input, select {
+    border: 1px solid transparent;
+    padding: 4px 10px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    background: #FFFAF0 !important;
+    outline: none;
+    height: 30px;
+    width: 80px;
+    font-size: 16px;
+    font-family: Tahoma;
+}
+
+#name {
+    width: 120px;
+}
+
+.center_button {
+    text-align: center;
+}
+
+table {
+    border-spacing: 0 10px;
+    margin: auto;
+    margin-bottom: 10px;
+    width: auto;
+}
+
+th {
+    background-color: rgba(200, 100, 150, .2);
+    border: 2px solid rgba(255, 255, 255, .15);
+    padding: 5px 10px;
+
+    color: #122b40;
+
+    font-size: 16px;
+}
+
+td {
+    background-color: rgba(200, 100, 150, .2);
+    border: 2px solid rgba(255, 255, 255, .15);
+    font-size: 16px;
+    padding: 5px 5px;
+}
+
+header {
+    background-color: rgba(200, 100, 150, .2);
+    height: 40px;
+    width: 100%;
+    border-radius: 15px 15px 0px 0px;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 5px;
+
+}
+
+.create {
+    padding: 5px 5px;
+    text-align: center;
+    font-size: 16px;
+
+}
+
+.delete {
+    text-align: center;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #122b40;
+}

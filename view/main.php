@@ -1,14 +1,13 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Simple CRUD</title>
+    <meta charset="UTF-8">
+    <title>Simple CRUD</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="center">
-  <div class="content">
-    <?php print $content; ?>
-  </div>
-</div>
+
+<?php print $content; ?>
 </body>
 </html>

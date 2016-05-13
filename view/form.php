@@ -1,30 +1,68 @@
-<form method="post">
-    <div>
-        <label for="name">Name:</label>
-        <input name="name" type="text" value="<?php print htmlspecialchars($goods['name']); ?>" id="name">
-    </div>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="center">
+    <div class="content">
+        <header>
+            <a href="index.php" title="Edit">Simple CRUD application   </a>
+        </header>
+        <form method="post">
+            <table>
+                <tr>
+                    <td>
+                        <label for="name">Name:</label>
+                    </td>
+                    <td>
+                        <input name="name" type="text" value="<?php print htmlspecialchars($goods['name']); ?>"
+                               id="name">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="price">Price:</label>
+                    </td>
+                    <td>
+                        <input name="price" type="text" value="<?php print htmlspecialchars($goods['price']); ?>"
+                               id="price">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="number">Number:</label>
+                    </td>
+                    <td>
+                        <input name="number" type="text" value="<?php print htmlspecialchars($goods['number']); ?>"
+                               id="number">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="warehouse">Warehouse</label>
+                    </td>
+                    <td>
+                        <select id="warehouse" name="id_warehouse">
+                            <?php foreach ($warehouses as $warehouses) : ?>
+                                <option
+                                    value="<?php print htmlspecialchars($warehouses['id']); ?>"><?php print htmlspecialchars($warehouses['name']); ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </td>
+                </tr>
+            </table>
 
-    <div>
-        <label for="price">Price:</label>
-        <input name="price" type="text" value="<?php print htmlspecialchars($goods['price']); ?>" id="price">
+            <div class="center_button">
+                <div>
+                    <input type="submit" name="save" value="Save">
+                </div>
+            </div>
+        </form>
     </div>
-
-    <div>
-        <label for="number">Number:</label>
-        <input name="number" type="text" value="<?php print htmlspecialchars($goods['number']); ?>" id="number">
-    </div>
-
-    <div>
-        <label for="warehouse">Warehouse</label>
-        <select id="warehouse" name="id_warehouse">
-            <?php foreach ($warehouses as $warehouses) : ?>
-                <option
-                    value="<?php print htmlspecialchars($warehouses['id']); ?>"><?php print htmlspecialchars($warehouses['name']); ?></option>
-            <?php endforeach; ?>
-        </select>
-    </div>
-
-    <div>
-        <input type="submit" name="save" value="Save">
-    </div>
-</form>
+</div>
+</body>
+</html>

@@ -17,6 +17,10 @@ switch ($op) {
         require __DIR__ . '/op/delete.php';
         break;
 
+    case 'add_warehouse':
+        require __DIR__ . '/op/create_warehouse.php';
+        break;
+
     default:
         require __DIR__ . '/op/index.php';
 }
