@@ -10,8 +10,20 @@
 <div class="center">
     <div class="content">
         <header>
-            <a href="index.php" title="Edit">Simple CRUD application   </a>
+            <a href="index.php">Simple CRUD application   </a>
         </header>
+
+        <?php
+        if(empty($goods)) {
+            $goods = array(
+                'name' => 'Name',
+                'id_warehouse' => '',
+                'price' => 0,
+                'number' => 1,
+            );
+        }
+        ?>
+
         <form method="post">
             <table>
                 <tr>

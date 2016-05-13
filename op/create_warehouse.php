@@ -1,8 +1,5 @@
 <?php
 
-$warehouse = array(
-    'name' => '',
-);
 
 if (!empty($_POST['save'])) {
     $sth = $pdo->prepare('INSERT INTO warehouses (name) VALUES (:name)');

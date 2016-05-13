@@ -1,12 +1,5 @@
 <?php
 
-$goods = array(
-    'name' => '',
-    'id_warehouse' => '',
-    'price' => 0,
-    'number' => 1,
-);
-
 if (!empty($_POST['save'])) {
     $sth = $pdo->prepare('INSERT INTO goods (name, price, number, id_warehouse) VALUES (:name, :price, :number, :id_warehouse)');
     $sth->execute(array(
