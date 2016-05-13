@@ -8,9 +8,9 @@ if ($goods = $sth->fetch(PDO::FETCH_ASSOC)) {
     if (!empty($_POST['save'])) {
         $sth = $pdo->prepare('UPDATE goods SET name = :name, price = :price, number = :number, id_warehouse = :id_warehouse WHERE id = :id');
 
-        if(!empty($_POST['name'])){
-            $name=$_POST['name'];
-        }else{
+        if (!empty($_POST['name'])) {
+            $name = $_POST['name'];
+        } else {
             $error = 'Undefined name';
             //header('Location: index.php');
             ob_start();
@@ -19,20 +19,20 @@ if ($goods = $sth->fetch(PDO::FETCH_ASSOC)) {
             require __DIR__ . '/../view/main.php';
             exit;
         }
-        if(is_numeric($_POST['price'])){
+        if (is_numeric($_POST['price'])) {
             $price = $_POST['price'];
-        }else{
+        } else {
             $price = 0;
         }
-        if(is_numeric($_POST['number'])){
+        if (is_numeric($_POST['number'])) {
             $number = $_POST['number'];
-        }else{
+        } else {
             $number = 0;
         }
 
-        if(is_numeric($_POST['id_warehouse'])){
+        if (is_numeric($_POST['id_warehouse'])) {
             $id_warehouse = $_POST['id_warehouse'];
-        }else{
+        } else {
             $error = 'Undefined warehouse';
             //header('Location: index.php');
             ob_start();

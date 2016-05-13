@@ -10,7 +10,7 @@
 <div class="center">
     <div class="content">
         <header>
-            <a href="index.php" title="Edit">Simple CRUD application   </a>
+            <a href="index.php" title="Edit">Simple CRUD application </a>
         </header>
         <div class="error">
             <?php echo $error; ?>

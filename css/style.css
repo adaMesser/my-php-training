@@ -22,19 +22,10 @@ body {
     width: 530px;
 }
 
-.item {
-    clear: both;
-    text-align: right;
-    line-height: 25px;
-}
-
+/*подписи к полям*/
 label {
     width: 100%;
     text-align: center;
-}
-
-.main {
-    float: left;
 }
 
 input, select {
@@ -49,12 +40,6 @@ input, select {
     height: 30px;
     width: 120px;
     font-size: 16px;
-    font-family: Tahoma;
-}
-
-
-.center_button {
-    text-align: center;
 }
 
 table {
@@ -68,9 +53,7 @@ th {
     background-color: rgba(200, 100, 150, .2);
     border: 2px solid rgba(255, 255, 255, .15);
     padding: 5px 10px;
-
     color: #122b40;
-
     font-size: 16px;
 }
 
@@ -96,18 +79,23 @@ header {
     padding: 5px 5px;
     text-align: center;
     font-size: 16px;
-
 }
 
-.delete, .error {
+/*блок для сообщения об удалении,
+блок сообщения об ошибке
+блок для кнопки save*/
+.delete, .error, .center_button {
     text-align: center;
 }
-.error{
+
+/*блок для вывода ошибки*/
+.error {
     color: red;
     font-weight: bold;
     font-size: 18px;
 }
 
+/*ссылка при наведении*/
 a:hover {
     text-decoration: none;
     color: #122b40;
