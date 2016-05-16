@@ -10,7 +10,7 @@
 <div class="center">
     <div class="content">
         <header>
-            <a href="../index.php">Simple CRUD application</a>
+            <a href="index.php">Simple CRUD application</a>
         </header>
 
         <form method="post">
